@@ -1,0 +1,12 @@
+_target_: model.multilabel.MultiLabelModel
+model:
+  _target_: torchvision.models.resnet50
+  pretrained: False
+  num_classes: ${data.num_class}  # defined in the datamodule config
+lr: 0.1
+weight_decay: 0.0001
+warmup: 0.1
+training_steps: $$computed[total_train_steps]
+optim_name: SGD
+optim_kwargs:
+  momentum: 0.9

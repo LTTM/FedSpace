@@ -1,0 +1,12 @@
+_target_: datamodule.classify_datamodule.Cifar100DataModule
+
+_name: cifar100
+
+data_dir: ${data_dir}/cifar100/
+num_class: 100
+batch_size: 32
+num_workers: 4
+pin_memory: True
+size: 224
+augment: True
+normalize: center

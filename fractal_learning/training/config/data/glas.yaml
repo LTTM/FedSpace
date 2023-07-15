@@ -1,0 +1,11 @@
+_target_: datamodule.medseg_datamodule.GlaSDataModule
+
+_name: glas
+
+data_dir: ${data_dir}/GlaS/
+size: 448
+batch_size: 8
+num_workers: 4
+pin_memory: True
+augment: True
+normalize: center

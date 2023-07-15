@@ -1,0 +1,17 @@
+# @package _global_
+defaults:
+  - override /data: cifar100
+  - override /model: ftclass
+  - override /callback: default
+
+data_dir: ${oc.env:DATASETS}/
+model_weights: imagenet  # path to model weights to finetune from, or "imagenet" for default imagenet pre-trained
+
+trainer:
+  max_epochs: 150
+
+data:
+  batch_size: 16
+
+model:
+  lr: 0.015

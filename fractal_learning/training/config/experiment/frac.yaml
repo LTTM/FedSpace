@@ -1,0 +1,34 @@
+# @package _global_
+defaults:
+  - override /callback: fractal
+
+trainer:
+  max_epochs: 90
+  limit_val_batches: 0
+
+data:
+  num_workers: 4
+  num_class: 1000
+  num_systems: 1000
+  per_class: 1000
+  generator:
+    _target_: datamodule.datasets.fractaldata.IFSGenerator
+    size: ${data.size}
+    jitter_params: True
+    flips: True
+    scale:
+      - 0.5
+      - 2.0
+    translate: 0.2
+    sigma: 
+      - 0.5
+      - 1.0
+    blur_p: 0.5
+    color: True
+    background: True
+    niter: 100000
+    patch: True
+
+model:
+  final_div_factor: 1e3
+  warmup: 0.0

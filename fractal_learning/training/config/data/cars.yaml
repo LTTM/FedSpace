@@ -1,0 +1,11 @@
+_target_: datamodule.classify_datamodule.StanfordCarsDataModule
+
+_name: stanford_cars
+
+data_dir: ${data_dir}/StanfordCars/
+num_class: 196
+batch_size: 16
+num_workers: 4
+pin_memory: True
+augment: True
+normalize: center

@@ -1,0 +1,8 @@
+/model_saved_check
+/cifar100
+/dataset_splits
+/configs
+/out
+__pycache__/
+wandb/
+.idea

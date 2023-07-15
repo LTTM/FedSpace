@@ -1,0 +1,11 @@
+_target_: datamodule.classify_datamodule.AircraftDataModule
+
+_name: aircraft
+
+data_dir: ${data_dir}/fgvc-aircraft-2013b/
+num_class: 100
+batch_size: 16
+num_workers: 4
+pin_memory: True
+augment: True
+normalize: center

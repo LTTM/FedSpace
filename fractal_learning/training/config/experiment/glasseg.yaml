@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - override /data: glas
+  - override /model: medseg
+  - override /callback: default
+
+trainer:
+  max_epochs: 90
+
+model:
+  final_div_factor: 1e3
+  # warmup: 0.0

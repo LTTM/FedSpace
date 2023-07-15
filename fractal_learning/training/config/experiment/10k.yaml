@@ -1,0 +1,5 @@
+# @package _global_
+
+data:
+  num_class: 10000
+  per_class: 10

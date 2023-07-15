@@ -1,0 +1,23 @@
+# @package _global_
+defaults:
+  - override /data: cifar100
+  - override /model: classification
+  - override /callback: default
+
+data_dir: ${oc.env:DATASETS}/
+
+seed: 1
+
+model:
+  lr: 0.15
+
+trainer:
+  max_epochs: 150
+
+callback:
+  model_checkpoint:
+      save_top_k: -1
+      every_n_val_epochs: 5
+
+logger:
+  name: ${data._name}/scratch

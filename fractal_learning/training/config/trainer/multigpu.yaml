@@ -1,0 +1,6 @@
+defaults:
+  - basic
+# set CUDA_VISIBLE_DEVICES environment variable to control which gpus
+# $ export CUDA_VISIBLE_DEVICES="0,1"
+accelerator: ddp
+gpus: -1  # uses all available

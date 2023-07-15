@@ -1,0 +1,4 @@
+defaults:
+  - basic
+# set CUDA_VISIBLE_DEVICES environment variable to control which gpu
+gpus: 1

@@ -1,0 +1,15 @@
+_target_: datamodule.fractal_datamodule.FractalClassDataModule
+
+_name: fractal
+
+data_dir: ../${data_dir}  # data_dir is specified in train_config.yaml
+batch_size: 32
+num_workers: 4
+pin_memory: True
+size: 224
+data_file: ifs-100k.pkl
+num_class: 1000
+per_class: 1000
+generator: null
+normalize: center
+cache_size: 512

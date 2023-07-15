@@ -1,0 +1,13 @@
+defaults:
+  - fractal
+
+data_file: ifs_unconstrained-search-25k.pkl
+generator:
+  _target_: datamodule.datasets.generator.IFSGenerator
+  size: ${data.size}
+  scale: False
+  translate: False
+  blur_p: 0
+  color: False
+  background: False
+  jitter_params: fractaldb-4

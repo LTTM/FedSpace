@@ -1,0 +1,8 @@
+data:
+  generator:
+    _target_: datamodule.datasets.fractaldata.IFSGenerator
+    size: ${data.size}
+    blur_p: 0.5
+    color: False
+    background: False
+    jitter_params: fractaldb-4

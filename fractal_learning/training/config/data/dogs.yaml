@@ -1,0 +1,11 @@
+_target_: datamodule.classify_datamodule.DogsDataModule
+
+_name: dogs
+
+data_dir: ${data_dir}/StanfordDogs/
+num_class: 120
+batch_size: 16
+num_workers: 4
+pin_memory: True
+augment: True
+normalize: center

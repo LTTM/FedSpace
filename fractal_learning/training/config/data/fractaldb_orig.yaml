@@ -1,0 +1,10 @@
+_target_: datamodule.fractaldb_datamodule.FractalDBDataModule
+
+_name: fractal_db
+
+data_dir: ${data_dir}  # data_dir is specified in train_config.yaml
+batch_size: 32
+num_workers: 3
+pin_memory: True
+size: 256
+num_class: 1000

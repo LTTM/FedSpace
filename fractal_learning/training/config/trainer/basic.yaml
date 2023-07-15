@@ -1,0 +1,4 @@
+_target_: pytorch_lightning.Trainer
+
+accelerator: null
+max_epochs: 30

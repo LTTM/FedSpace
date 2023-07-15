@@ -1,0 +1,8 @@
+wandb:
+    _target_: pytorch_lightning.loggers.wandb.WandbLogger
+    project: fractal-learning
+    job_type: train
+    group: ""
+    save_dir: ./${data._name}
+    # entity: ""  # set to name of your wandb team or just remove it
+    # offline: False  # set True to store all logs only locally

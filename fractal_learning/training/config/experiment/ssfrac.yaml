@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - override /data: ssfractal
+  - override /model: selfsupervised
+  - override /callback: ssfractal
+
+trainer:
+  max_epochs: 90
+  limit_val_batches: 0

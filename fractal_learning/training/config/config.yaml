@@ -1,0 +1,23 @@
+defaults:
+  - data: fractal
+  - model: classification
+  - logger: wandb
+  - callback: fractal
+  - trainer: singlegpu
+
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: colorlog
+
+data_dir: data/
+
+seed: 0
+output_dir: './logs/'
+
+hydra:
+  job:
+    config_name: hydra-config.yaml
+  run:
+    dir: ${output_dir}
+  sweep:
+    dir: ${output_dir}
+    subdir: './'

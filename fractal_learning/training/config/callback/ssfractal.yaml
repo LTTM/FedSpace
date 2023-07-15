@@ -1,0 +1,11 @@
+defaults:
+  - default
+
+model_checkpoint:
+  save_last: True
+  save_top_k: -1
+  monitor: train/loss
+  mode: min
+  every_n_epochs: 1
+  save_on_train_epoch_end: True
+  save_weights_only: True

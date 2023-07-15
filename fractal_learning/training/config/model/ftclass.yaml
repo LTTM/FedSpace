@@ -1,0 +1,16 @@
+defaults:
+  - classification
+
+lr: 0.01
+weight_decay: 0.00005
+optim_name: SGD
+optim_kwargs:
+  momentum: 0.9
+param_groups:
+  # use larger learning rate in the randomly initialized classifier
+  - name: fc.weight
+    lr_factor: 10
+    weight_decay: 0.0001
+  - name: fc.bias
+    lr_factor: 10
+    weight_decay: 0

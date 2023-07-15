@@ -1,0 +1,15 @@
+_target_: model.glas.GlaSSegmentationModel
+model:
+  _target_: segmentation_models_pytorch.Unet
+  encoder_name: resnet50
+  encoder_weights: null
+  classes: 1
+lr: 0.1
+weight_decay: 0.0001
+warmup: 0.1
+training_steps: $$computed[total_train_steps]
+loss_fn: null
+mixup: True
+optim_name: SGD
+optim_kwargs:
+  momentum: 0.9

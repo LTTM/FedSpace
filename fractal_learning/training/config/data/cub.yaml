@@ -1,0 +1,11 @@
+_target_: datamodule.classify_datamodule.CubDataModule
+
+_name: CUB
+
+data_dir: ${data_dir}/CUB_200_2011/
+num_class: 200
+batch_size: 16
+num_workers: 4
+pin_memory: True
+augment: True
+normalize: center

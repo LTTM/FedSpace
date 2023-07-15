@@ -1,0 +1,24 @@
+_target_: datamodule.fractal_datamodule.SelfSupervisedFractalDataModule
+
+_name: ssfractal
+
+data_dir: ../${data_dir}  # data_dir is specified in train_config.yaml
+batch_size: 16
+num_workers: 4
+pin_memory: True
+size: 224
+data_file: ifs-1mil.pkl
+num_systems: 1000000
+per_system: 1
+normalize: center
+period: 2
+generator:
+  _target_: datamodule.datasets.generator.SelfSupervisedGenerator
+  size: ${data.size}
+  cache_size: 512
+  size_range:
+    -0.25
+    -1.25
+  jitter_params: svd
+  niter: 100000
+  patch: True

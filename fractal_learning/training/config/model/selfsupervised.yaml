@@ -1,0 +1,16 @@
+_target_: model.simsiam.SimSiam
+model:
+  _target_: torchvision.models.resnet50
+  pretrained: False
+lr: 0.05
+weight_decay: 0.0001
+warmup: 0.0
+training_steps: $$computed[total_train_steps]
+optim_name: SGD
+optim_kwargs:
+  momentum: 0.9
+param_groups:
+  # use larger learning rate in the randomly initialized classifier
+  - name: predictor
+    fix_lr: True
+final_div_factor: 1e3

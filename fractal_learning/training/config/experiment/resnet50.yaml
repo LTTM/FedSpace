@@ -1,0 +1,6 @@
+# @package _global_
+model:
+  model:
+    _target_: torchvision.models.resnet50
+    pretrained: False
+    num_classes: ${data.num_class}

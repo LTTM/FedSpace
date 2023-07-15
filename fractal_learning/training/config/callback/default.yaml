@@ -1,0 +1,12 @@
+lr_monitor:
+  _target_: pytorch_lightning.callbacks.LearningRateMonitor
+  logging_interval: 'step'
+
+model_checkpoint: 
+  _target_: training.utils.ModelCheckpoint
+  # _target_: pytorch_lightning.callbacks.ModelCheckpoint
+  filename: '{epoch}'
+  save_last: True
+  save_top_k: 1
+  monitor: val/acc
+  mode: max

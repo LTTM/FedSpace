@@ -1,0 +1,13 @@
+# @package _global_
+defaults:
+  - override /data: multifractal
+  - override /model: multilabelclass
+  - override /callback: fractal
+
+trainer:
+  max_epochs: 90
+  limit_val_batches: 0
+
+model:
+  final_div_factor: 1e3
+  warmup: 0.0
